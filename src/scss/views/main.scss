@@ -1,0 +1,153 @@
+.s-main {
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a:hover {
+  color: $dark-violet;
+}
+
+.nav-list a::before {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 2px;
+  background-color: $dark-violet;
+  transition: 0.5s all;
+}
+
+.nav-list a:hover::before {
+  opacity: 1;
+}
+
+.nav-list a {
+  position: relative;
+  color: #8a8c93;
+  transition: 0.5s all;
+}
+
+nav {
+  padding: 85px 0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 80px;
+}
+
+.nav-list li:nth-child(6) {
+  margin-left: auto;
+}
+
+.main-wrapper {
+  display: flex;
+  padding-top: 75px;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.main-info {
+  max-width: 650px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.main-images {
+  display: flex;
+}
+
+.logotype {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 55px;
+  margin-bottom: 75px;
+}
+
+.logotype::before {
+  position: absolute;
+  left: 15px;
+  top: -2px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-color: $dark-yellow;
+  border-radius: 50%;
+}
+.logotype::after {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-color: $dark-violet;
+  border-radius: 50%;
+}
+
+.main-title {
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.main-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #656e92;
+  max-width: 450px;
+  line-height: 36px;
+}
+
+.main-images__left {
+  padding-top: 60px;
+  position: relative;
+}
+
+.main-images__left img, .main-images__right img {
+  position: relative;
+  z-index: 55;
+}
+
+.main-images__left:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 84px;
+  right: 0;
+  width: 304px;
+  height: 580px;
+  background-color: $light-yellow;
+  border-radius: 10px 10px 0;
+}
+
+.main-images__right {
+  margin-left: 30px;
+  position: relative;
+}
+
+.main-images__right::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  width: 469px;
+  height: 660px;
+  background-color: $light-violet;
+  border-radius: 10px;
+}

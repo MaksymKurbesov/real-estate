@@ -1,0 +1,130 @@
+.choose-us {
+  position: relative;
+  padding: 100px 0;
+  margin-bottom: 125px;
+}
+
+.choose-us-title {
+  margin-bottom: 30px;
+}
+
+.choose-us-heading {
+  max-width: 700px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 80px;
+  color: $black;
+  margin-bottom: 45px;
+}
+
+.choose-us-subtitle {
+  max-width: 530px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $purple;
+  margin-bottom: 60px;
+}
+
+.choose-us-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 80px;
+}
+
+.choose-us-prev-button, .choose-us-next-button {
+  width: 100px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $dark-violet;
+  text-align: right;
+  background: url('../images/arrow-prev.png') no-repeat;
+  cursor: pointer;
+}
+
+.choose-us-next-button {
+  background: url('../images/arrow-next.png') no-repeat;
+  text-align: left;
+  background-position: 53px 0;
+}
+
+.choose-us-features {
+  display: flex;
+}
+
+.choose-us-features li {
+  position: relative;
+  width: 250px;
+  padding-left: 80px;
+  color: $black;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.choose-us-features li:first-child {
+  background: url('../images/arhitectural.png') 13px 50% no-repeat;
+}
+.choose-us-features li:nth-child(2) {
+  background: url('../images/home-purchase.png') 14px 50% no-repeat;
+}
+.choose-us-features li:last-child {
+  background: url('../images/reduction.png') 14px 50% no-repeat;
+}
+
+.choose-us-features li::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  z-index: -5;
+  display: block;
+  width: 57px;
+  height: 57px;
+  box-shadow: 0 20px 24px rgba(255, 63, 115, 0.4);
+  border-radius: 9px;
+  background-color: #ffd3df;
+}
+
+.choose-us-features li:nth-child(2):after {
+  box-shadow: 0 20px 24px rgba(111, 80, 255, 0.4);
+  background-color: #dad7ff;
+}
+
+.choose-us-features li:nth-child(3):after {
+  box-shadow: 0 20px 24px rgba(255, 203, 79, 0.4);
+  background-color: #ffedc2;
+}
+
+.choose-us-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.choose-us-image::before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  z-index: -5;
+  display: block;
+  width: 773px;
+  height: 770px;
+  border-radius: 10px;
+  background-color: $light-violet;
+}
+
+.dots {
+  position: absolute;
+  bottom: -20px;
+  right: 600px;
+  z-index: -6;
+  background-image: radial-gradient($light-violet 12%, rgba(0, 0, 0, 0) 12%);
+  background-position: 0 0;
+  background-size: 30px 30px;
+  height: 245px;
+  width: 245px;
+}

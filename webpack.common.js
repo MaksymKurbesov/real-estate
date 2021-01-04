@@ -3,6 +3,7 @@ const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "/src"),
@@ -23,7 +24,8 @@ module.exports = {
   output: {
     filename: "index.js",
     path: PATHS.dist,
-    publicPath: "./",
+    publicPath: "/",
+    // assetModuleFilename: "[name]",
   },
   module: {
     rules: [
@@ -63,11 +65,17 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "fonts/[name][ext][query]",
+        },
       },
     ],
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: `${PATHS.src}/images`, to: `images` }],
+    }),
     new MiniCssExtractPlugin(),
     ...PAGES.map(
       (page) =>
