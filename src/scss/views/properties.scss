@@ -1,0 +1,94 @@
+.s-properties {
+  text-align: center;
+  padding-bottom: 100px;
+  margin-bottom: 75px;
+}
+
+.properties-title {
+  margin-bottom: 25px;
+}
+
+.properties-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.properties-subtitle {
+  max-width: 500px;
+  margin: 0 auto;
+  color: $purple;
+  font-size: 16px;
+  line-height: 36px;
+  margin-bottom: 100px;
+}
+
+
+.properties-list {
+  display: grid;
+  grid-template-areas: 
+    "luxury two-room three-room"
+    "luxury modern working";
+  gap: 30px;
+}
+
+.properties-list li {
+  position: relative;
+}
+
+.property-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 322px;
+  height: 81px;
+  padding-left: 80px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align-last: left;
+}
+
+.property-info::before {
+  content: '';
+  display: block;
+  width: 47px;
+  height: 47px;
+  border-radius: 9px;
+  background-color: #dad7ff;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.property-info__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: $dark-violet;
+  margin-bottom: 7px;
+}
+
+.property-info__price {
+  font-size: 16px;
+  color: $purple;
+}
+
+.luxury {
+  grid-area: luxury;
+}
+.two-room {
+  grid-area: two-room;
+}
+.three-room {
+  grid-area: three-room;
+}
+.modern {
+  grid-area: modern;
+}
+.working {
+  grid-area: working;
+}

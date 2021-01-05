@@ -4,6 +4,10 @@
 @import './views/main.scss'; 
 @import './views/features.scss'; 
 @import './views/why-to-choose-us.scss'; 
+@import './views/properties.scss'; 
+@import './views/feedbacks-slider.scss'; 
+@import './views/booking.scss'; 
+@import './views/footer.scss'; 
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -12,8 +16,10 @@
 }
 
 body {
+  color: $black;
   background-color: #f7f8fa;
   font-family: Inter;
+  font-weight: 400;
 }
 
 ul {

@@ -1,0 +1,50 @@
+.s-booking {
+  position: relative;
+  width: 90%;
+  padding: 125px 0;
+  background-color: $dark-violet;
+  background-position-x: -100px;
+  color: white;
+  border-radius: 0 20px 20px 0;
+}
+
+.s-booking::after {
+  content: url('../images/booking-image.png');
+  position: absolute;
+  bottom: -4px;
+  right: 100px;
+}
+
+.container--booking {
+  padding-left: 100px;
+}
+
+.booking-text {
+  position: relative;
+  z-index: 5;
+  max-width: 465px;
+}
+
+.booking-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.booking-text p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 36px;
+  margin-bottom: 60px;
+}
+
+.booking-button {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 51px rgba(255, 255, 255, 0.5);
+  color: $dark-violet;
+  font-size: 16px;
+  font-weight: 600;
+}
