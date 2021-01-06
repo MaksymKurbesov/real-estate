@@ -1,6 +1,7 @@
 .s-main {
   padding-bottom: 50px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .nav-list {
@@ -62,6 +63,11 @@ nav {
   top: 0;
   left: 0;
   z-index: 4;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .main-images {
@@ -115,6 +121,11 @@ nav {
 .main-images__left {
   padding-top: 60px;
   position: relative;
+  transform: translate3d(-1100px, 0px, 0px);
+  animation-name: move;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.54,0,.31,.99);
 }
 
 .main-images__left img, .main-images__right img {
@@ -137,6 +148,11 @@ nav {
 .main-images__right {
   margin-left: 30px;
   position: relative;
+  transform: translate3d(900px, 0px, 0px);
+  animation-name: move;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.54,0,.31,.99);
 }
 
 .main-images__right::before {
@@ -149,4 +165,16 @@ nav {
   height: 660px;
   background-color: $light-violet;
   border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
 }

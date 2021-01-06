@@ -1,4 +1,6 @@
-import Test from "./js/test";
+import animation from "./js/animation";
 import "./scss/index.scss";
 
-Test();
+window.addEventListener("DOMContentLoaded", () => {
+  animation();
+});
