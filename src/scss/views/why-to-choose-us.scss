@@ -1,4 +1,4 @@
-.choose-us {
+.s-choose-us {
   position: relative;
   padding: 100px 0;
   margin-bottom: 125px;
@@ -6,6 +6,8 @@
 
 .choose-us-title {
   margin-bottom: 30px;
+  opacity: 0;
+  transform: translate3d(0, -15px, 0);
 }
 
 .choose-us-heading {
@@ -14,6 +16,8 @@
   font-weight: 700;
   line-height: 80px;
   margin-bottom: 45px;
+  opacity: 0;
+  animation-delay: 1s;
 }
 
 .choose-us-subtitle {
@@ -22,6 +26,8 @@
   line-height: 36px;
   color: $purple;
   margin-bottom: 60px;
+  opacity: 0;
+  animation-delay: 1s;
 }
 
 .choose-us-buttons {
@@ -29,6 +35,8 @@
   justify-content: space-between;
   width: 300px;
   margin-bottom: 80px;
+  opacity: 0;
+  animation-delay: 1s;
 }
 
 .choose-us-prev-button, .choose-us-next-button {
@@ -65,6 +73,7 @@
   background: url('../images/arhitectural.png') 13px 50% no-repeat;
 }
 .choose-us-features li:nth-child(2) {
+
   background: url('../images/home-purchase.png') 14px 50% no-repeat;
 }
 .choose-us-features li:last-child {

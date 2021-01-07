@@ -3,9 +3,9 @@
   width: 90%;
   padding: 125px 0;
   background-color: $dark-violet;
-  background-position-x: -100px;
   color: white;
   border-radius: 0 20px 20px 0;
+  transform: translate3d(-100%, 0, 0);
 }
 
 .s-booking::after {
@@ -23,6 +23,7 @@
   position: relative;
   z-index: 5;
   max-width: 465px;
+  opacity: 0;
 }
 
 .booking-text h2 {
@@ -41,10 +42,26 @@
 
 .booking-button {
   padding: 30px;
+  opacity: 0;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 20px 51px rgba(255, 255, 255, 0.5);
   color: $dark-violet;
   font-size: 16px;
   font-weight: 600;
+}
+
+.animation--toCenterBezier {
+  animation-name: toCenter;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+}
+
+.animation--fadeInDelay {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
 }

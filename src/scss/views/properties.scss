@@ -79,16 +79,32 @@
 
 .luxury {
   grid-area: luxury;
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
 }
 .two-room {
   grid-area: two-room;
+  opacity: 0;
+  transform: translate3d(0, -50px, 0);
 }
 .three-room {
   grid-area: three-room;
+  opacity: 0;
+  transform: translate3d(50px, -50px, 0);
 }
 .modern {
-  grid-area: modern;
+  grid-area: modern; 
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
 }
 .working {
   grid-area: working;
+  opacity: 0;
+  transform: translate3d(50px, 50px, 0);
+}
+
+.animation--fadeToCenter {
+  animation-name: fadeToCenter;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }

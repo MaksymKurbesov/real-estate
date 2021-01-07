@@ -2,6 +2,7 @@
   position: relative;
   padding: 50px 0px 250px 300px;
   background-color: #eff1ff;
+  overflow: hidden;
 }
 
 .s-feedback-slider::before {
@@ -13,6 +14,14 @@
   height: 850px;
   border-radius: 10px;
   background-color: #d7ddff;
+  opacity: 0;
+  transform: translate3d(1000px, 0, 0);
+}
+
+.s-feedback-slider.animation--before::before {
+  animation-name: fadeToCenter;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .slider {
@@ -22,6 +31,8 @@
   padding: 90px 80px;
   border-radius: 10px;
   background-color: #ffffff;
+  opacity: 0;
+  transform: translate3d(-1000px, 0, 0);
 }
 
 
