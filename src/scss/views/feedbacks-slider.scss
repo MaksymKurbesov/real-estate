@@ -39,7 +39,11 @@
 .slider__item {
   position: relative;
   display: none;
+  height: 340px;
+  flex-direction: column;
+  margin-bottom: 75px;
 }
+
 
 .slider__item:first-child {
   display: block;
@@ -58,8 +62,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 5px 0;
-  margin-bottom: 80px;
-  width: 240px;
+  margin-top: auto;
+  width: 260px;
   height: 60px;
   padding-left: 75px;
   font-size: 16px;
@@ -100,12 +104,87 @@
   width: 57px;
   height: 2px;
   background-color: $dark-violet;
+  opacity: 0.3;
+  transition: all 0.3s;
 }
 
-.slider__dots span:first-child {
+.slider__dots span.slider__dots--active {
   width: 120px;
+  opacity: 1;
 }
 
 .slider__dots span:not(:last-child) {
   margin-right: 20px;
+}
+
+.slider__buttons {
+  position: absolute; 
+  bottom: -35px;
+  right: 0;
+}
+
+.slider__buttons button {
+  color: white;
+  border-radius: 10px;
+}
+
+.slider-button-prev {
+  padding: 30px 30px 30px 90px;
+  background-color: $dark-yellow;
+  margin-right: 30px;
+  box-shadow: 0 20px 51px rgba(255, 216, 123, 0.5);
+}
+
+.slider__buttons .slider-button-prev::after {
+  content: url('../images/arrow-white-prev.png');
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.slider__buttons .slider-button-next {
+  padding: 30px 90px 30px 30px;
+  background-color: $dark-violet;
+  border-top-right-radius: 0;
+  box-shadow: 0 20px 51px rgba(84, 80, 255, 0.5);
+}
+
+.slider__buttons .slider-button-next::after {
+  content: url('../images/arrow-white-next.png');
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1500px) {
+  .s-feedback-slider {
+    padding: 50px 0px 200px 200px;
+  }
+  .s-feedback-slider::before {
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .s-feedback-slider {
+    padding: 50px 0px 150px 100px;
+  }
+  .s-feedback-slider::before {
+    width: 750px;
+    height: 700px;
+  }
+  .slider {
+    width: 580px;
+    height: 500px;
+    padding: 60px 50px;
+  }
+  .slider__item {
+    height: 275px;
+    margin-bottom: 50px;
+  }
+  .feedback-text {
+    font-size: 40px;
+    line-height: 55px;
+    margin-bottom: 50px;
+  }
 }

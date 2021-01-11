@@ -6,12 +6,15 @@
 
 .properties-title {
   margin-bottom: 25px;
+  transform: translate3d(0, -15px, 0);
+  opacity: 0;
 }
 
 .properties-heading {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 40px;
+  opacity: 0;
 }
 
 .properties-subtitle {
@@ -21,6 +24,7 @@
   font-size: 16px;
   line-height: 36px;
   margin-bottom: 100px;
+  opacity: 0;
 }
 
 
@@ -34,13 +38,29 @@
 
 .properties-list li {
   position: relative;
+  transition: all 0.2s;
+  top: 0;
+}
+
+.properties-list li img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.properties-list li:hover {
+  top: -10px;
+}
+
+.properties-list li:hover img {
+  transition: all 0.2s;
+  box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.75);
 }
 
 .property-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 322px;
+  width: 320px;
   height: 81px;
   padding-left: 80px;
   border-radius: 10px;
@@ -107,4 +127,14 @@
   animation-name: fadeToCenter;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .property-info {
+    width: 250px;
+    height: 70px;
+  }
+  .property-info__title, .property-info__price {
+    font-size: 13px;
+  }
 }

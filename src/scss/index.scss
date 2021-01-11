@@ -1,7 +1,9 @@
+//utils
 @import './_vars.scss';
 @import './_fonts.scss';
 @import './_animations.scss';
 
+// views
 @import './views/main.scss'; 
 @import './views/features.scss'; 
 @import './views/why-to-choose-us.scss'; 
@@ -9,6 +11,7 @@
 @import './views/feedbacks-slider.scss'; 
 @import './views/booking.scss'; 
 @import './views/footer.scss'; 
+
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -38,6 +41,37 @@ button {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
+  padding: 0 15px;
   margin: 0 auto;
+}
+
+.default-button--prev {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: right;
+}
+
+.default-button--prev::after {
+  content: url('../images/arrow-violet-prev.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.default-button--next {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.default-button--next::after {
+  content: url('../images/arrow-violet-next.png');
+  position: absolute;
+  top: 0;
+  right: 0;
 }

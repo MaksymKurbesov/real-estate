@@ -16,3 +16,9 @@
     transform: translate3d(0px, 0px, 0px);
   }
 }
+
+@keyframes pulsation {
+  from {
+    box-shadow: 0 20px 24px rgba(255, 63, 115, 0.0);
+  }
+}

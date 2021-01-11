@@ -48,15 +48,21 @@ export default class Animation {
     const headingElement = document.querySelector('.choose-us-heading');
     const subtitleElement = document.querySelector('.choose-us-subtitle');
     const buttonsElement = document.querySelector('.choose-us-buttons');
+    const imageElement = document.querySelector('.choose-us-image');
+    const featuresElements = document.querySelectorAll('.choose-us-features li');
 
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             titleElement.classList.add('animation--fadeToCenter');
+            imageElement.classList.add('animation--fadeToCenter');
             headingElement.classList.add('animation--fadeIn');
             subtitleElement.classList.add('animation--fadeIn');
             buttonsElement.classList.add('animation--fadeIn');
+            featuresElements.forEach((feature) => {
+              feature.classList.add('animation--fadeToCenter');
+            });
           }
         });
       },
@@ -68,6 +74,9 @@ export default class Animation {
 
   initProperties() {
     const propertiesElements = document.querySelectorAll('.properties-list li');
+    const propertiesTitleElement = document.querySelector('.properties-title');
+    const propertiesHeadingElement = document.querySelector('.properties-heading');
+    const propertiesSubtitleElement = document.querySelector('.properties-subtitle');
 
     const observer = new IntersectionObserver(
       (entries, observer) => {
@@ -76,10 +85,13 @@ export default class Animation {
             propertiesElements.forEach((element) => {
               element.classList.add('animation--fadeToCenter');
             });
+            propertiesTitleElement.classList.add('animation--fadeToCenter');
+            propertiesHeadingElement.classList.add('animation--fadeIn');
+            propertiesSubtitleElement.classList.add('animation--fadeIn');
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     observer.observe(document.querySelector('.s-properties'));

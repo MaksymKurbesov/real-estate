@@ -89,3 +89,33 @@
   font-size: 16px;
   line-height: 36px;
 }
+
+@media screen and (max-width: 1200px) {
+  .features-description {
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .description-title {
+    margin-bottom: 20px;
+  }
+
+  .features-title {
+    text-align: center;
+  }
+
+  .features-description {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .features-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature--modern {
+    margin-right: 25px;
+  }
+}

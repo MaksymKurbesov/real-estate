@@ -190,3 +190,41 @@ nav {
   animation-timing-function: cubic-bezier(.54,0,.31,.99);
 }
 
+@media screen and (max-width: 1000px) {
+  .s-main {
+    margin-bottom: 50px;
+  }
+  .nav-list li:not(:last-child) {
+    margin-right: 40px;
+  }
+  .main-title {
+    font-size: 45px;
+  }
+  .main-subtitle {
+    max-width: 370px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .logotype {
+    margin-bottom: 40px;
+  }
+  .main-images__left {
+    padding-top: 48px;
+  }
+  .main-images__left img {
+    width: 150px;
+  }
+  .main-images__right img {
+    width: 300px;
+  }
+  .main-images__left:before {
+    height: 485px;
+    width: 240px;
+    bottom: 4px; 
+  }
+  .main-images__right::before {
+    height: 480px;
+    width: 300px;
+    bottom: 17px;
+  }
+}
