@@ -41,3 +41,37 @@ footer a {
 .footer-office p:nth-child(2) {
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+  .container--grid {
+    grid-template-columns: 310px 200px;
+    justify-content: space-around;
+    row-gap: 70px;
+  }
+  .footer-nav li:not(:last-child), 
+  .footer-contact__write-to-us span, 
+  .footer-contact__call-to-us span {
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .container--grid {
+    grid-template-columns: 270px;
+  }
+  footer {
+    padding: 50px 0;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  footer h3 {
+    margin-bottom: 15px;
+  }
+  .container--grid {
+    row-gap: 30px;
+  }
+  .footer-nav li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}

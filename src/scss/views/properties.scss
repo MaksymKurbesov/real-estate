@@ -33,7 +33,7 @@
   grid-template-areas: 
     "luxury two-room three-room"
     "luxury modern working";
-  gap: 30px;
+  gap: 20px;
 }
 
 .properties-list li {
@@ -43,8 +43,10 @@
 }
 
 .properties-list li img {
+  display: block;
   border-radius: 15px;
   width: 100%;
+  height: 100%;
 }
 
 .properties-list li:hover {
@@ -130,11 +132,68 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .properties-list {
+    display: grid;
+    grid-template-areas: 
+      "luxury two-room"
+      "luxury three-room"
+      "modern working";
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .property-info {
-    width: 250px;
-    height: 70px;
+    width: 240px;
+    height: 65px;
+    padding-left: 70px;
+  }
+  .property-info::before {
+    width: 40px;
+    height: 40px;
   }
   .property-info__title, .property-info__price {
-    font-size: 13px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .properties-list {
+    grid-template-areas: 
+      "luxury"
+      "two-room"
+      "three-room"
+      "modern"
+      "working";
+    grid-template-rows: 275px; 
+    grid-template-columns: 400px;
+  }
+  .properties-list li img {
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .properties-heading {
+    font-size: 29px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .properties-subtitle {
+    margin: 20px auto 40px;
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .s-properties {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  .properties-list {
+    grid-template-columns: 270px;
+    grid-template-rows: 200px
   }
 }

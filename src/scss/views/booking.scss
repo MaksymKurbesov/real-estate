@@ -15,10 +15,6 @@
   right: 100px;
 }
 
-.container--booking {
-  padding-left: 100px;
-}
-
 .booking-text {
   position: relative;
   z-index: 5;
@@ -41,6 +37,8 @@
 }
 
 .booking-button {
+  position: relative;
+  z-index: 5;
   padding: 30px;
   opacity: 0;
   background-color: white;
@@ -70,4 +68,111 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: 2.5s;
+}
+
+@media screen and (max-width: 1500px) {
+  .s-booking {
+    padding: 80px 50px;
+  }
+  .s-booking::after {
+    transform: scale(0.8);
+    bottom: -58px;
+    right: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .s-booking {
+    padding: 40px 50px;
+  }
+  .s-booking::after {
+    transform: scale(0.6);
+    bottom: -112px;
+    right: -50px;
+  }
+  .booking-text {
+    max-width: 440px;
+  }
+  .booking-text h2 {
+    font-size: 34px;
+    line-height: 52px;
+  }
+  .booking-text p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .booking-button {
+    padding: 24px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .s-booking {
+    padding: 20px 50px;
+  }
+  .s-booking::after {
+    transform: scale(0.4);
+    bottom: -166px;
+    right: -135px;
+  }
+  .booking-text {
+    max-width: 400px;
+  }
+  .booking-text h2 {
+    font-size: 31px;
+    line-height: 48px;
+    margin-bottom: 10px;
+  }
+  .booking-text p {
+    font-size: 14px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  .booking-button {
+    padding: 17px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .s-booking::after {
+    transform: scale(0.3);
+    bottom: -193px;
+    right: -200px;
+  }
+  .booking-text {
+    max-width: 300px;
+  }
+  .booking-text h2 {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  .booking-text p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .s-booking::after {
+    transform: scale(0.2);
+    bottom: -220px;
+    right: -240px;
+  }
+  .s-booking {
+    padding: 15px 20px;
+  }
+  .booking-text h2 {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .booking-text p {
+    font-size: 10px;
+    line-height: 19px;
+  }
+  .booking-button {
+    padding: 13px;
+    font-size: 12px;
+  }
 }

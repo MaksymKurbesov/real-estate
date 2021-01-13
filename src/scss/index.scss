@@ -3,16 +3,6 @@
 @import './_fonts.scss';
 @import './_animations.scss';
 
-// views
-@import './views/main.scss'; 
-@import './views/features.scss'; 
-@import './views/why-to-choose-us.scss'; 
-@import './views/properties.scss'; 
-@import './views/feedbacks-slider.scss'; 
-@import './views/booking.scss'; 
-@import './views/footer.scss'; 
-
-
 *, *::after, *::before {
   box-sizing: border-box;
   padding: 0;
@@ -42,7 +32,7 @@ button {
 
 .container {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 25px;
   margin: 0 auto;
 }
 
@@ -75,3 +65,12 @@ button {
   top: 0;
   right: 0;
 }
+
+// views
+@import './views/main.scss'; 
+@import './views/features.scss'; 
+@import './views/why-to-choose-us.scss'; 
+@import './views/properties.scss'; 
+@import './views/feedbacks-slider.scss'; 
+@import './views/booking.scss'; 
+@import './views/footer.scss'; 
