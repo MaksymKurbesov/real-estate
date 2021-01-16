@@ -11,7 +11,7 @@ const PATHS = {
 };
 
 // const for pug
-const PAGES_DIR = `${PATHS.src}/pug`;
+const PAGES_DIR = `${PATHS.src}/assets/pug`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = {
@@ -58,12 +58,15 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext][query]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext][query]',
+          filename: 'assets/fonts/[name][ext][query]',
         },
       },
     ],
@@ -71,7 +74,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new CopyPlugin({
-      patterns: [{ from: `${PATHS.src}/images`, to: `images` }],
+      patterns: [
+        { from: `${PATHS.src}/assets/images`, to: `assets/images` },
+        { from: `${PATHS.src}/assets/fonts`, to: `assets/fonts` },
+      ],
     }),
     new MiniCssExtractPlugin(),
     ...PAGES.map(

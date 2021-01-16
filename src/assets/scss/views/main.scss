@@ -1,6 +1,5 @@
 .s-main {
-  padding-bottom: 50px;
-  margin-bottom: 100px;
+  padding-bottom: 150px;
   overflow: hidden;
 }
 
@@ -229,7 +228,7 @@ nav {
 
 @media screen and (max-width: 1000px) {
   .s-main {
-    margin-bottom: 50px;
+    padding-bottom: 100px;
   }
   .nav-list li:not(:last-child) {
     margin-right: 40px;
@@ -305,7 +304,7 @@ nav {
 
 @media screen and (max-width: 700px) {
   .s-main {
-    padding-bottom: 100px;
+    padding-bottom: 75px;
   }
   .main-wrapper {
     margin-top: 180px;
@@ -338,9 +337,6 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  .s-main {
-    padding-bottom: 50px;
-  }
   nav {
     visibility: hidden;
   }
@@ -366,6 +362,9 @@ nav {
 }
 
 @media screen and (max-width: 500px) {
+  .s-main {
+    padding-bottom: 50px;
+  }
   .menu-button {
     padding: 50px 0 0;
   }

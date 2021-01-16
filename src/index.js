@@ -1,6 +1,6 @@
-import Animation from './js/animation';
-import FeedbackSlider from './js/feedback-slider';
-import './scss/index.scss';
+import Animation from './assets/js/animation';
+import FeedbackSlider from './assets/js/feedback-slider';
+import './assets/scss/index.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
   new Animation().initAnimations();

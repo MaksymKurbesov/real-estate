@@ -1,7 +1,6 @@
 .s-properties {
   text-align: center;
-  padding-bottom: 100px;
-  margin-bottom: 75px;
+  padding-bottom: 175px;
 }
 
 .properties-title {
@@ -160,6 +159,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  .s-properties {
+    padding-bottom: 75px;
+  }
   .properties-list {
     grid-template-areas: 
       "luxury"
